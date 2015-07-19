@@ -12,7 +12,7 @@
     <section class="note-cate">
         <header>
             <h1>笔记本</h1>
-            <h3>我的笔记 <i class="icon-plus-sign" id="add_cate"></i></h3>
+            <h3>我的笔记 <i class="icon-plus-sign" id="add_cate" onclick="note.addNoteCate(1)"></i></h3>
         </header>
         <article>
             <ul class="cate" id="cates">
@@ -28,7 +28,7 @@
     <!--笔记-->
     <section class="note-thumb">
         <header>
-            <h1>笔记<button id="add_note" onclick="note.noteEdit();"><i class=" icon-certificate"></i>&nbsp; 新建笔记</button></h1>
+            <h1>笔记<button id="add_note" onclick="note.noteNew();"><i class=" icon-certificate"></i>&nbsp; 新建笔记</button></h1>
         </header>
         <article>
             <ul class="note" id="notes">
@@ -43,12 +43,12 @@
     <!--编辑笔记-->
     <section class='note-edit' id="noteEdit">
         <header>
-            <span id='editBtn'>编辑</span><span id='viewBtn'>查看</span>
+            <span id='editBtn' onclick="note.noteEdit(this)">编辑</span><span id='viewBtn' onclick="note.noteview(this)">查看</span>
         </header>
         <article>
             <div class='edit' id='edit'>
-                <input type='text' placeholder="标题"/>
-                <textarea></textarea>
+                <input id='noteTitle' type='text' placeholder="标题"/>
+                <textarea id='noteContent'></textarea>
             </div>
             <div class='view' id='view'>
                 <h3>这是一篇日记</h3>
@@ -70,8 +70,8 @@
             </div>
         </article>
         <footer>
-            <span>确定</span>
-            <span>取消</span>
+            <span onclick='note.affirmNew()'>确定</span>
+            <span onclick='note.cancelNew()'>取消</span>
         </footer>
     </section>
     <script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>

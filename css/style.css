@@ -67,6 +67,18 @@ body{
     overflow-y: scroll;*/
     margin-bottom:20px;
 }
+.note-cate .cate input{
+    width: 100px;
+    margin-left: 15px;
+    background-color: #efefef;
+}
+.note-cate .cate>div>span{
+    margin-left: 5px;
+}
+.note-cate .cate>div>span:hover{
+    cursor: pointer;
+    color: #effefe;
+}
 .note-cate li{
     line-height: 2.2;
     text-indent: 15px;
@@ -196,7 +208,11 @@ body{
 }
 .note-edit>header span:hover{
     cursor: pointer;
+    border-bottom: solid 3px #999999;/*da3712*/
+}
+.activeSpan{
     border-bottom: solid 3px #da3712;
+    cursor: pointer;
 }
 .note-edit>header input{
     border:solid #999999 1px;
