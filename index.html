@@ -4,9 +4,79 @@
     <meta charset="UTF-8">
     <title>Ria legend by FE-legend</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/lib/font-awesome.min.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-  <h4>ddddddddddddd</h4>
+    <!--笔记本-->
+    <section class="note-cate">
+        <header>
+            <h1>笔记本</h1>
+            <h3>我的笔记 <i class="icon-plus-sign" id="add_cate"></i></h3>
+        </header>
+        <article>
+            <ul class="cate" id="cates">
+                
+            </ul>
+            <h3>回收站 <i class="icon-trash" id="empty"></i></h3>
+            <ul class="cate" id="recycle">
+                <li><label>物理</label><i>(<strong>12</strong>)</i></li>
+                <li><label>CET-6</label><i>(<strong>2</strong>)</i></li>
+            </ul>
+        </article>
+    </section>
+    <!--笔记-->
+    <section class="note-thumb">
+        <header>
+            <h1>笔记<button id="add_note" onclick="note.noteEdit();"><i class=" icon-certificate"></i>&nbsp; 新建笔记</button></h1>
+        </header>
+        <article>
+            <ul class="note" id="notes">
+
+            </ul>
+        </article>
+    </section>
+    <!--显示笔记-->
+    <section class="note-detail" id='noteDetail'>
+
+    </section>
+    <!--编辑笔记-->
+    <section class='note-edit' id="noteEdit">
+        <header>
+            <span id='editBtn'>编辑</span><span id='viewBtn'>查看</span>
+        </header>
+        <article>
+            <div class='edit' id='edit'>
+                <input type='text' placeholder="标题"/>
+                <textarea></textarea>
+            </div>
+            <div class='view' id='view'>
+                <h3>这是一篇日记</h3>
+                <div>
+                    <p>这个问题好比揭画，一层层撕开，能不停往深处说。
+
+                    第一层自然是吐槽。
+
+                    我记得前几日还和朋友说，别看现在人谁都知道孙悟空师徒四人，但一百个里头都不见得有一个读过《西游记》，他不信，于是趁着《大圣归来》的上映，我们会发现接二连三的问题出现了。
+
+                    有人问，为什么孙悟空在遇到唐僧之前就叫“孙悟空”了，这名字不是他师傅取的吗？
+
+                    你说，这个问题，让我怎么答？我认认真真告诉你，这名字是“菩提”取的，我还嫌浪费时间呢。
+
+                    然后又看到了这个问题，江流儿不是《围棋少年》里面的吗？
+
+                    我本来也想一笑了之，毕竟这充分说明大家是不读原著的，因为《西游记》里有：“却说此子在木板上，顺水流去，一直流到金山寺脚下停住。那金山寺长老叫做法明和尚，修真悟道，已得无生妙诀。正当打坐参禅，忽闻得小儿啼哭之声，一时心动，急到江边观看，只见涯边一片木板上，睡着一个婴儿，长老慌忙救起。见了怀中血书，方知来历。取个乳名，叫做江流，托人抚养。血书紧紧收藏</p>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <span>确定</span>
+            <span>取消</span>
+        </footer>
+    </section>
+    <script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/data/data.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
   </body>
 </html>
 

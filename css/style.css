@@ -1,0 +1,251 @@
+/*===========reset============*/
+html,body,section,a,p,h1,h2,h3,h4,h5,h6,strong,em,span,i,input,textarea,img,button,select,li,ol,ul,table,dd,dl,dt,div{
+    padding: 0;
+    margin:0;
+    outline:none;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+    font-size:14px;
+}
+strong,em,i{
+    font-style: normal;
+    font-weight: normal;
+}
+input,button,textarea{
+    border:none;
+    background:#fff;
+}
+ul,li,ol{
+    list-style: none;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-size:14px;
+    color:#555;
+    font-family: "Microsoft YaHei",Î¢ÈíÑÅºÚ, sans-serif !important;
+}
+
+/**note-cate**/
+.note-cate{
+    width:15%;
+    height:100%;
+    min-height: 700px;
+    float:left;
+    background:#333;
+    color:#CCC;
+}
+.note-cate h1{
+    font-size:32px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom:40px;
+}
+.note-cate h3{
+    font-size:16px;/*
+    border:1px solid #FFF;*/
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+}
+.note-cate h3 i{
+    position: absolute;
+    right:10px;
+    top:7px;
+}
+.note-cate h3 i:hover{
+    cursor: pointer;
+    color:#efefef;
+}
+.note-cate .cate{/*
+    overflow-y: scroll;*/
+    margin-bottom:20px;
+}
+.note-cate li{
+    line-height: 2.2;
+    text-indent: 15px;
+}
+.note-cate .cate>li:hover{
+    cursor: pointer;
+    padding-left: 15px;
+    background:#999;
+    color: #f7f7f7;
+}
+.note-cate .active{
+    background:#999;
+}
+
+/**note-thumb**/
+.note-thumb{
+    width:35%;
+    height:100%;
+    min-height: 700px;
+    float:left;
+    border-left:10px solid #CCC;
+    border-right:10px solid #CCC;
+    padding-left:10px;
+    padding-right:10px;
+}
+.note-thumb h1{
+    font-size:32px;
+    margin-top: 30px;
+    margin-bottom:40px;
+    position: relative;
+    color:#CCC;
+}
+.note-thumb h1 button{
+    position: absolute;
+    top:6px;
+    right:0px;
+    background: #da3712;
+    color:#fff;
+    font-size:16px;
+    padding:6px 13px;
+    border-radius: 5px;
+}
+.note-thumb h1 button:hover{
+    cursor: pointer;
+    background-color: #ea4444;
+}
+.note-thumb .note{
+
+}
+.note-thumb .note span{
+    float: right;
+}
+.note-thumb li{
+    width:100%;
+    height:120px;
+    overflow: hidden;
+    background:#E9E9E9;
+    margin:5px 0;
+    border-radius: 5px;
+    padding:5px;
+}
+.note-thumb li:hover{
+    cursor: pointer;
+    background: #FFF !important;
+    border:2px solid #0088bb;
+}
+.note-thumb li h6{
+    font-weight: bold;
+}
+.note-thumb .active{
+    background: #FFF !important;
+    border:2px solid #0088bb;
+}
+/**note-detail**/
+.note-detail{
+    display: block;
+    width:50%;
+    height: 100%;
+    min-height: 700px;
+    float: left;
+}
+.note-detail h1{
+    width:100%;
+    height:112px;
+    background:#da3712;
+    color:#FFF;
+    font-size:25px;
+    position: relative;
+    padding:30px 20px;
+}
+.note-detail h1 span{
+    font-size: 18px;
+}
+.note-detail h1 i{
+    position: absolute;
+    right: 30px;
+    top:33px;
+}
+.note-detail h1 i:hover{
+    cursor: pointer;
+    color:#efefef;
+}
+.note-detail .note-content{
+    text-indent: 20px;
+    padding:20px;
+}
+/**note-edit**/
+.note-edit{
+    display: none;
+    width:50%;
+    height: 100%;
+    min-height: 700px;
+    float: left;
+}
+.note-edit>header{
+    margin-top: 40px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-bottom: solid 1px #999999;
+}
+.note-edit>header span{
+    font-size: 18px;
+    padding: 5px 15px;
+    font-weight: 600;
+}
+.note-edit>header span:hover{
+    cursor: pointer;
+    border-bottom: solid 3px #da3712;
+}
+.note-edit>header input{
+    border:solid #999999 1px;
+    border-radius: 3px;
+    height: 25px;
+    width: 200px;
+    margin-left: 10px;
+}
+.note-edit>article{
+    margin-top: 15px;
+    padding-bottom: 6px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.note-edit>article .edit{
+    display: block;
+}
+.note-edit>article .view{
+    display: none;
+}
+.note-edit>article input{
+    border-bottom: solid 1px #999999;
+    width: 100%;
+    height: 35px;
+}
+.note-edit>article textarea{
+    width: 100%;
+    border-bottom: solid 1px #999999;
+    height: 350px;
+    margin-top: 15px;
+}
+.note-edit>article h3{
+    font-size: 21px;
+    margin: 10px 5px;
+}
+.note-edit>footer{
+    margin-top: 15px;
+}
+.note-edit>footer span{
+    float: right;
+    padding: 5px 18px;
+    background-color: #ededed;
+    margin-right: 15px;
+}
+.note-edit>footer span:hover{
+    cursor: pointer;
+    background-color: #dedede;
+}
+
+.hiddenSpan{
+    display: none;
+}
