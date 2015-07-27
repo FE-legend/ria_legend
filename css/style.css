@@ -5,21 +5,28 @@ html,body,section,a,p,h1,h2,h3,h4,h5,h6,strong,em,span,i,input,textarea,img,butt
     outline:none;
     box-sizing: border-box;
 }
-h1,h2,h3,h4,h5,h6{
-    font-weight: normal;
-    font-size:14px;
+
+
+.note-thumb ul,
+.note-thumb li,
+.note-cate ul,
+.note-cate li{
+    list-style: none;
 }
-strong,em,i{
+.note-cate strong,
+.note-cate i{
     font-style: normal;
     font-weight: normal;
 }
-input,button,textarea{
+.note-cate input,
+.note-edit input,
+.note-edit button,
+.note-thumb button,
+.note-edit textarea{
     border:none;
     background:#fff;
 }
-ul,li,ol{
-    list-style: none;
-}
+
 html{
     width: 100%;
     height: 100%;
@@ -46,13 +53,14 @@ body{
     text-align: center;
     margin-top: 30px;
     margin-bottom:40px;
+    font-weight: normal;
 }
 .note-cate h3{
-    font-size:16px;/*
-    border:1px solid #FFF;*/
+    font-size:16px;
     position: relative;
     height: 32px;
     line-height: 32px;
+    font-weight: normal;
 }
 .note-cate h3 i{
     position: absolute;
@@ -63,25 +71,36 @@ body{
     cursor: pointer;
     color:#efefef;
 }
-.note-cate .cate{/*
-    overflow-y: scroll;*/
+.note-cate .cate{
     margin-bottom:20px;
 }
 .note-cate .cate input{
     width: 100px;
+    height:22px;
     margin-left: 15px;
     background-color: #efefef;
+    padding-left:10px;
 }
-.note-cate .cate>div>span{
-    margin-left: 5px;
+.note-cate .cate>div>.icon-ok{
+    margin-left: 15px;
+    margin-right:15px;
 }
-.note-cate .cate>div>span:hover{
+.note-cate .cate>div>i:hover{
     cursor: pointer;
     color: #effefe;
 }
 .note-cate li{
     line-height: 2.2;
     text-indent: 15px;
+    position: relative;
+}
+.note-cate li .icon-remove{
+    position: absolute;
+    right:10px;
+    top:8px;
+}
+.icon-remove:hover{
+    cursor: pointer;
 }
 .note-cate .cate>li:hover{
     cursor: pointer;
@@ -147,6 +166,7 @@ body{
 }
 .note-thumb li h6{
     font-weight: bold;
+    font-size:14px;
 }
 .note-thumb .active{
     background: #FFF !important;
@@ -160,7 +180,7 @@ body{
     min-height: 700px;
     float: left;
 }
-.note-detail h1{
+.note-detail h1.detail-title{
     width:100%;
     height:112px;
     background:#da3712;
@@ -169,15 +189,21 @@ body{
     position: relative;
     padding:30px 20px;
 }
-.note-detail h1 span{
+.note-detail h1 span.detail-time{
     font-size: 18px;
 }
-.note-detail h1 i{
+.note-detail .detail-title .icon-wrap{
     position: absolute;
     right: 30px;
     top:33px;
 }
-.note-detail h1 i:hover{
+.note-detail .detail-title .icon-edit{
+    margin-right:20px;
+}
+.note-detail .detail-title .icon-edit:hover{
+    cursor: pointer;
+}
+.note-detail .detail-time i:hover{
     cursor: pointer;
     color:#efefef;
 }
@@ -264,4 +290,100 @@ body{
 
 .hiddenSpan{
     display: none;
+}
+@media(min-width: 678px){
+    .note-cate .add-icon{
+        display: none;
+    }
+}
+@media(max-width: 678px){
+    .note-cate{
+        display: block;
+        background-color: #fff;
+        width: 100%;
+        color: #101010;
+    }
+    .note-cate h1{
+        background-color: #101010;
+        color: #fff;
+        margin-top: 0px;
+        font-size: 25px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .note-cate .cate>div{
+        margin-top: 10px;
+    }
+    .note-cate .cate{
+        margin-top: 10px;
+    }
+    .note-cate .cate>li{
+        border-bottom: solid 1px #dadada;
+        padding:8px 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 18px;
+    }
+    .note-cate .cate>li:first-child{
+        border-top: solid 1px #dadada;
+    }
+    .note-cate .cate>li:hover{
+        cursor: pointer;
+        background:#efefef;
+        color: #101010;
+        padding-left: 10px;
+    }
+    .note-cate .trash{
+        position: fixed;
+        bottom:0px;
+        background-color: #f7f7f7;
+        width: 100%;
+        padding: 8px 25px 40px 25px;
+        display: block;
+        font-size: 18px;
+    }
+    .note-cate .icon-trash{
+        position: absolute;
+        right: 30px;
+        top: 15px;
+    }
+    .note-cate .icon-trash:hover{
+        color: #666666;
+    }
+    .note-cate .note-tag{
+        display: none;
+    }
+    .note-cate .icon-plus-sign{
+        color: #fff;
+        position: absolute;
+        top: 25px;
+        right: 35px;
+        display: block;
+    }
+    .note-cate .cate input{
+        width: 250px;
+    }
+    .note-cate .cate>div>i:hover{
+        color: #999999;
+    }
+    .note-cate .icon-plus-sign:hover{
+        color: #ededed;
+        cursor: pointer;
+    }
+    .note-cate .cate .icon-remove{
+        margin-top: 10px;
+        margin-right: 15px;
+    }
+    .note-cate .recycle{
+        display: none;
+    }
+    .note-thumb{
+        display: none;
+    }
+    .note-detail{
+        display: none;
+    }
+    .note-edit{
+        display: none;
+    }
 }
